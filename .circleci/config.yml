@@ -8,12 +8,12 @@ jobs:
      # build image
      - run: |         
          docker info
-         docker build -t nodeapp -f Dockerfile .
+         docker build -t dockerapp -f Dockerfile .
 
      # deploy the image
      - run: |  
          docker login --username=sarada29493@gmail.com --password=00c4c5ed-e9b5-4945-876c-9d1a42e781e0 registry.heroku.com
-         docker tag nodeapp registry.heroku.com/boiling-caverns-65295/web
+         docker tag dockerapp registry.heroku.com/boiling-caverns-65295/web
          docker push registry.heroku.com/boiling-caverns-65295/web                
          curl https://cli-assets.heroku.com/install.sh | sh
          heroku container:release web --app boiling-caverns-65295
