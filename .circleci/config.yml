@@ -12,9 +12,9 @@ jobs:
 
      # deploy the image
      - run: |  
-         docker login --username=pinaki.best@gmail.com --password=8fe0c4d9-c792-4685-8d42-fa264e504f10 registry.heroku.com
-         docker tag nodeapp registry.heroku.com/nodeapp-pinaki/web
-         docker push registry.heroku.com/nodeapp-pinaki/web                
+         docker login --username=sarada29493@gmail.com --password=00c4c5ed-e9b5-4945-876c-9d1a42e781e0 registry.heroku.com
+         docker tag nodeapp registry.heroku.com/boiling-caverns-65295/web
+         docker push registry.heroku.com/boiling-caverns-65295/web                
          curl https://cli-assets.heroku.com/install.sh | sh
-         heroku container:release web --app nodeapp-pinaki
+         heroku container:release web --app boiling-caverns-65295
      
